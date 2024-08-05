@@ -3,7 +3,7 @@
 Small repo with fun stuff
 
 * Project Euler
-** TODO Problem 51 -- Prime Digit Replacements
+** DONE Problem 51 -- Prime Digit Replacements
 #+begin_quote
 By replacing the 1st digit of the 2-digit number *3, it turns out that six of the nine possible values: 13, 23, 43, 53, 73, and 83, are all prime.
 
@@ -15,9 +15,43 @@ Find the smallest prime which, by replacing part of the number (not necessarily 
 
 Generate primes.
 
-Filter by buckets of same amount of digits.
-Iterate trough them living only the prime numbers with repeating digits (2>).
+Iterate trough them leaving only prime numbers with repeating digits (2>).
 
-Buckets with more than 8 should consider further studying.
+Since we want to have at least 8 variations, the repeating digit cannot be bigger than 1.
+(d <= 9 - Family size)
 
-** TODO 52
+Form masks and just try them all. Replace repeating digit with the other ones
+and checking if the resulting number is prime.
+
+The way I am doing it is not the final perfect solution, but it solves the
+problem. Let /n/ be a prime number that repeats digit /d/, I am checking if
+n[d'/d] is prime. But it may be the case that the solution comes from partial
+substitution. E.g. if the number is /55***3/, maybe the solution comes from
+replacing just to digits instead of three.
+
+
+** DONE Problem 52 -- Permuted Multiples
+#+begin_quote
+It can be seen that the number, 125874 , and its double, 251748 , contain
+exactly the same digits, but in a different order.
+Find the smallest positive integer, /x/ , such that /2x/ , /3x/ , /4x/ ,
+/5x/,and /6x/, contain the same digits.
+#+end_quote
+
+*** Solution -- works
+Check that the string codification using primes are the same.
+
+*** Nice insight in the discussion thread
+
+The decimal representation of 1/7 has the desired property.
+** TODO Problem 53 -- Combinatoric selections
+
+#+begin_quote
+How many, not necessarily distinct, values of C(n,k) for 1 <= n <= 100, are greater than one-million?
+#+end_quote
+
+*** Solution -- works
+
+Facts used: n < m, C(n,k) < C(m,k)
+Used pascals triangle, just computing until n/2, and replicating results: C(n, k) = C(n, n - k)
+Also, p < q <= n/2 => C(n,p) < C(n,q)
