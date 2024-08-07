@@ -44,7 +44,7 @@ Check that the string codification using primes are the same.
 *** Nice insight in the discussion thread
 
 The decimal representation of 1/7 has the desired property.
-** TODO Problem 53 -- Combinatoric selections
+** DONE Problem 53 -- Combinatoric selections
 
 #+begin_quote
 How many, not necessarily distinct, values of C(n,k) for 1 <= n <= 100, are greater than one-million?
@@ -55,3 +55,18 @@ How many, not necessarily distinct, values of C(n,k) for 1 <= n <= 100, are grea
 Facts used: n < m, C(n,k) < C(m,k)
 Used pascals triangle, just computing until n/2, and replicating results: C(n, k) = C(n, n - k)
 Also, p < q <= n/2 => C(n,p) < C(n,q)
+
+*** No insights
+** TODO Problem 54 -- Poker Game!
+#+begin_quote
+The file, poker.txt, contains one-thousand random hands dealt to two players. Each line of the file contains ten cards (separated by a single space): the first five are Player 1's cards and the last five are Player 2's cards. You can assume that all hands are valid (no invalid characters or repeated cards), each player's hand is in no specific order, and in each hand there is a clear winner.
+
+How many hands does Player 1 win?
+#+end_quote
+
+*** Solution
+Nothing much, define hands, winnin scores and compare them.
+
+*** No insights
+
+** TODO
