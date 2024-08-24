@@ -92,3 +92,35 @@ Also, there are palindromic numbers that are themselves Lychrel numbers: e.x. 49
 Q: How many Lychrel numbers are there below 10.000?
 
 *** Brute Force
+** DONE Problem 56 -- Bigest digit sum of a^b numbers.
+Brute Force
+** DONE Problem 57 -- Square Root convergents!
+
+Square root of two can be decomposed in \(1 + \frac{1}{2+ \frac{1}{2+ ...}}\)
+
+In the first one)thousand expansions, how many fractions contain a numerator with more digits than the denominator?
+
+*** Solution
+
+P_{0} = 1/2, P_{n+1} = 1 / 2 + P_{n}
+
+We can compute it easily with function returning rationals (as natural pairs).
+*** brute force
+People in the comments talked about a different way of doing it.
+I saw some of them approximating the solution.
+** DONE Problem 58 -- Spiral Primes
+
+Find the side of the spiral squere where there is a ratio less than 10 of prime numbers on the diagonals
+
+*** Solution
+
+Generate sequence of numbers in the diagonal.
+I coulnd't come up with a close formula so I computed it.
+
+1 -+2> 3 -+2> 5 -+2> 7 -+2> 9 -+4> 11 ...
+
+so add 2 to the side every 5 numbers.
+
+checking primality using a sieve (although I read something on the comments of using something else)
+
+There is an algorithm Robin-Miller for primality test in a range of numbers, next time check that one.
