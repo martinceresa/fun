@@ -124,3 +124,5 @@ so add 2 to the side every 5 numbers.
 checking primality using a sieve (although I read something on the comments of using something else)
 
 There is an algorithm Robin-Miller for primality test in a range of numbers, next time check that one.
+** DONE XOR Decryption
+Brute force, get whatever result has the most ocurrences of letter 'e'.
